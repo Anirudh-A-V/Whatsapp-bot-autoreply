@@ -49,7 +49,13 @@ class Bot:
         except Exception as e:
             print('message not copied : ', e)
 
-    # navigate to the send button
+    # send the message
+    def send_message(self):
+        try:
+            pt.typewrite(['enter'], interval=self.click_speed)
+        except Exception as e:
+            print('message not sent : ', e)
+             
 W_bot = Bot(speed=.5, click_speed=.3)
 sleep(2)
 W_bot.nav_last_message()
